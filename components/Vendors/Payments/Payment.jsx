@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Table from '@/components/Table'
 const Payment = () => {
   return (
-    <div>Payment</div>
+    <div className='w-full'>
+      <Table/>
+    </div>
   )
 }
 
