@@ -66,7 +66,7 @@ const PaymentTable = ({ data, handleShow }) => {
             <div className="flex-1  font-light  leading-4 text-center">
               {person.date}
             </div>
-            <div className="flex-1 text-center flex md:gap-3 justify-center max-lg:flex-col">
+            <div className="flex-1 text-center flex md:gap-3 justify-center max-lg:flex-col gap-1">
               <button className="flex-1 text-[10px] bg-oohpoint-grey-300 font-thin text-oohpoint-grey-100 rounded-md p-[3px]">
                 Assign 
               </button>

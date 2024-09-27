@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Table = ({ isShow }) => {
+const Table = ({ isShow , handleShow}) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const data = [
@@ -16,6 +16,11 @@ const Table = ({ isShow }) => {
     },
     // ... other data
   ];
+
+  // Details
+  const handleDetails = ()=>{
+    handleShow()
+  }
 
   const itemsPerPage = 4;
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -88,7 +93,7 @@ const Table = ({ isShow }) => {
             <div className="flex-1 text-center flex gap-4 justify-center text-[10px] md:text-base max-lg:flex-col ">
               {person.campaigns}
               {isShow && (
-                <div className="text-[9px] md:text-sm bg-oohpoint-grey-300 text-oohpoint-primary-2 text-primary rounded-2xl flex items-center px-1 md:px-3">
+                <div className="text-[9px] md:text-sm bg-oohpoint-grey-300 cursor-pointer text-oohpoint-primary-2 text-primary rounded-2xl flex items-center px-1 md:px-3" onClick={handleDetails}>
                   Know more
                 </div>
               )}
