@@ -1,9 +1,11 @@
 import React from 'react'
-import Table from '@/components/Table'
+// import PaymentTable from '@/components/VerificationTable'
+import PaymentTable from "../../PaymentTable"
 const Payment = () => {
+  const data = []
   return (
     <div className='w-full'>
-      <Table/>
+      <PaymentTable/>
     </div>
   )
 }

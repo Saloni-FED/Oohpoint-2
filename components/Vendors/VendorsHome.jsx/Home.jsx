@@ -37,7 +37,7 @@ const Home = () => {
         />
       </div>
       <div className="mt-5 w-full ">
-        <div className="flex w-full bg-oohpoint-grey-100 justify-between px-10 py-4 rounded-lg ">
+        <div className="flex w-full bg-oohpoint-grey-100 justify-between px-10 py-4 rounded-lg max-md:flex-col">
           <div className="flex gap-4">
             {[0, 1, 2, 3, 4].map((item) => (
               <div
