@@ -1,5 +1,5 @@
 import Sidebar from "@/components/Sidebar";
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "@/components/Header";
 import { MyProvider } from "@/context/MyContext";
 

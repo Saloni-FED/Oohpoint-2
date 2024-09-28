@@ -36,7 +36,7 @@ const SimpleLineChart = ({ head, count, Icon }) => (
         <AiOutlineStock className="text-3xl text-red-500" />
       )}
     </div>
-    <ResponsiveContainer width="100%" height={140}>
+    <ResponsiveContainer width="100%" height={160}>
       <LineChart data={data}>
         {/* Define a gradient for the line */}
         <defs>

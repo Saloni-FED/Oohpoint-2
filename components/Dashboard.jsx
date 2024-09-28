@@ -8,11 +8,19 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { MdOutlineCampaign } from "react-icons/md";
 import { PiHandshake } from "react-icons/pi";
 import Table from "./Table";
+import DonutChart from "./DonutChart";
+import dynamic from "next/dynamic";
+import StackCard from "./StackCard.jsx/StackCard";
+import CustomLineGraph from "./CustomLineGraph";
+
+const MapLocation = dynamic(() => import("./MapLocation"), {
+  ssr: false, // This will disable server-side rendering for the map
+});
 
 const Dashboard = () => {
   return (
-    <div className="bg-oohpoint-grey-200 w-full h-full flex flex-col justify-start items-start">
-      <div className=" w-full flex flex-col items-start justify-center px-8 py-4 gap-1">
+    <div className="bg-oohpoint-grey-200 w-full h-full flex flex-col justify-start items-start  mt-2">
+      <div className=" w-full flex flex-col items-start justify-center lg:px-8   px-1 py-4 gap-1">
         <h1 className=" text-oohpoint-grey-500 font-bold text-4xl">
           Dashboard
         </h1>
@@ -20,7 +28,7 @@ const Dashboard = () => {
           Welcome back, Pankaj
         </p>
       </div>
-      <div className=" w-full flex flex-col items-start justify-start px-8 gap-4">
+      <div className=" w-full flex flex-col items-start justify-start lg:px-8  px-1 gap-4">
         <div className=" w-full flex flex-wrap lg:justify-between justify-around items-center gap-4 lg:gap-2">
           <Card
             head="Pending Approvals"
@@ -55,11 +63,22 @@ const Dashboard = () => {
             Icon={true}
           />
         </div>
-        <div className=" w-full flex flex-wrap lg:justify-between justify-around items-start gap-4 lg:gap-2 pb-8">
+        <div className=" w-full flex flex-wrap lg:justify-between justify-around items-center gap-4 lg:gap-2">
           <SpiderChart head="Vendors" />
+          <DonutChart />
+          <MapLocation />
+        </div>
+        <div className="  w-full flex flex-wrap lg:justify-between justify-around items-center gap-4 lg:gap-2">
+          <StackCard
+            head={"07 Sept Approval"}
+            count={"Team Payments"}
+            Icon={true}
+          />
+          <SimpleLineChart head="Income Statistics" count="+8%" Icon={true} />
+          <CustomLineGraph head="Savings" count="Rs. 7000" Icon={true} />
         </div>
       </div>
-      <div className=" w-full flex flex-col items-start justify-start px-8 gap-4">
+      <div className=" w-full flex flex-col items-start justify-start lg:px-8 px-1 gap-4 mt-10 py-5">
         <Table />
       </div>
     </div>
