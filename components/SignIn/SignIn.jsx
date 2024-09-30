@@ -10,7 +10,7 @@ const SignIn = () => {
 
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url('/bg-signin.png')` }}
       ></div>
 

@@ -26,6 +26,13 @@ module.exports = {
         "oohpoint-grey-400": "#4F3A6F",
         "oohpoint-grey-500": "#250F45",
         "oohpoint-grey-600": "#06010D",
+        chart: {
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
+        },
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],

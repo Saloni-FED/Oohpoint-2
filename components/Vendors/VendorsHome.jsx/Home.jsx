@@ -5,7 +5,6 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { MdOutlineCampaign } from "react-icons/md";
 import { PiHandshake } from "react-icons/pi";
 import SimpleLineChart from "../../LineChart";
-import SimplePieChart from "../../PieChart";
 import SpiderChart from "../../SpiderChart";
 import GradientBarChart from "../../BarChart";
 import Table from "@/components/Table";
